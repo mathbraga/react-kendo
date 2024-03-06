@@ -1,38 +1,39 @@
 'use client';
 
-import products from './fakeData.json';
-import { useState } from 'react';
-import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import { orderBy } from '@progress/kendo-react-data-tools';
+import { useState, useEffect } from 'react';
+import { TracksGrid } from '@/components/TracksGrid';
+import createTracksDTO from '@/utils/createTracksDTO';
 
-const initialSort = [
-  {
-    field: 'UnitPrice',
-    dir: 'asc',
-  },
-];
+const fetchData = async (stateUpdater) => {
+  try {
+    const response = await fetch('/api/tracks');
+    if (!response.ok) {
+      throw new Error('Something went wrong with the local api.');
+    }
+    const jsonData = await response.json();
+    const tracksDTO = createTracksDTO(jsonData);
+    stateUpdater(tracksDTO);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export default function Home() {
-  const [sort, setSort] = useState(initialSort);
+  const [tracks, setTracks] = useState(null);
+
+  useEffect(() => {
+    fetchData(setTracks);
+  }, []);
 
   return (
-    <main className='flex flex-col items-center justify-center h-screen'>
-      <div className='w-9/12'>
-        <Grid
-          style={{
-            height: '400px',
-          }}
-          data={orderBy(products, sort)}
-          sortable={true}
-          sort={sort}
-          onSortChange={(e) => setSort(e.sort)}
-        >
-          <GridColumn field='ProductID' title='ID' width='40px' />
-          <GridColumn field='ProductName' title='Name' width='250px' />
-          <GridColumn field='Category.CategoryName' title='CategoryName' />
-          <GridColumn field='UnitPrice' title='Price' />
-          <GridColumn field='UnitsInStock' title='In stock' />
-        </Grid>
+    <main>
+      <div className='flex flex-col items-center justify-center mt-20 mb-8'>
+        <div className='text-3xl font-bold my-4'>Top 120 tracks</div>
+        {tracks && ( //TODO suspense
+          <div className='w-10/12'>
+            <TracksGrid tracks={tracks} />
+          </div>
+        )}
       </div>
     </main>
   );
