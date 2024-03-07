@@ -6,9 +6,15 @@ Este projeto consiste no desenvolvimento de uma interface front-end com React/Ne
 
 ## Como executar o projeto localmente
 
+### Clone o projeto
+- A partir do seu terminal, execute:
+```
+git clone https://github.com/mathbraga/react-kendo.git
+```
+
 ### Requisitar uma chave de API
 - O primeiro passo é criar uma conta no Last.fm (https://www.last.fm/join)
-- Depois de criar e confirmar o email, seguindo os passos em (https://www.last.fm/api/webauth), crie uma conta de API em https://www.last.fm/api/account/create
+- Depois de criar e confirmar o email, seguindo os passos em (https://www.last.fm/api/webauth) (**apenas o primeiro passo é necessário para este caso**), crie uma conta de API em https://www.last.fm/api/account/create
   ![image](https://github.com/mathbraga/react-kendo/assets/31048764/7543215a-2f0e-4dc2-890b-8b1b5b738785)
 - Escolha um nome e descrição, e em `Callback URL` e `Application homepage` pode preencher com `http://localhost:3000/`
 - Depois de confirmar, sua conta de API será criada e terá uma `API key`, também tendo acesso a essas informações em https://www.last.fm/api/accounts
@@ -24,18 +30,27 @@ Este projeto consiste no desenvolvimento de uma interface front-end com React/Ne
   ```
 
 ### Instalar pacotes
-- Execute o comando `npm install` a partir do diretório raiz do projeto.
+- No seu terminal, a partir do diretório raiz, execute:
+  ```
+  npm install
+  ```
 - Todos os pacotes necessários para o funcionamento da aplicação serão instalados.
 
-### Executar a aplicação
-- Para executar a aplicação localmente em ambiente de desenvolvimento, execute o comando `npm run dev` a partir do diretório raiz.
+### Executar a aplicação em ambiente de desenvolvimento
+- A partir do diretório raiz:
+  ```
+  npm run dev
+  ```
 - O ambiente de desenvolvimento será configurado:
   
   ![image](https://github.com/mathbraga/react-kendo/assets/31048764/ac8fc41e-d548-4662-9233-6794f838982c)
 - Se tudo estiver correto, basta acessar `http://localhost:3000/` no seu navegador.
 
 ### Executar testes
-- Para executar testes, basta executar o comando `npm test` a partir do diretório raiz.
+- A partir do diretório raiz:
+  ```
+  npm test
+  ```
 
 
 
