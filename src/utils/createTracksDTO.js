@@ -1,9 +1,8 @@
 export default function createTracksDTO(tracksData) {
-  const tracks = tracksData.tracks.track;
-  const tracksDTO = tracks.map((track) => ({
+  const tracksDTO = tracksData.map((track) => ({
     name: track.name,
     artist: track.artist.name,
-    listeners: track.listeners,
+    listeners: parseInt(track.listeners),
     url: track.url,
   }));
 

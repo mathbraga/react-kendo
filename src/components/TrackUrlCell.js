@@ -1,3 +1,4 @@
+// Custom cell for Kendo Grid component
 export const TrackUrlCell = (props) => {
   const lastFMUrl = props.dataItem.url;
 
