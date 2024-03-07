@@ -1,6 +1,8 @@
 # Last.fm Top 120 feed
 Este projeto consiste no desenvolvimento de uma interface front-end com React/Next.js para a integração com a API de músicas do [Last.fm](https://www.last.fm/pt/home).
 
+Live link: https://react-kendo.vercel.app/
+
 ## Requisitos de Sistema
 - [Node.js 18.17](https://nodejs.org/en) ou superior.
 
