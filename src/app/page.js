@@ -37,7 +37,13 @@ export default function Home() {
             <TracksGrid height='493px' tracks={tracks} />
           </div>
         ) : (
-          <Image src='/loading.gif' alt='Loading...' width={40} height={40} />
+          <Image
+            src='/loading.gif'
+            alt='Loading...'
+            width={40}
+            height={40}
+            unoptimized
+          />
         )}
       </div>
     </main>
