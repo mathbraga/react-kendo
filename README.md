@@ -21,7 +21,7 @@ git clone https://github.com/mathbraga/react-kendo.git
   ![image](https://github.com/mathbraga/react-kendo/assets/31048764/91e1393e-7d5f-4ee1-a17e-9ca5a48e92af)
 
 ### Criar arquivo `.env`
-- Copie o arquivo `.env.example` no diretório raiz do projeto e crie seu `.env`.
+- Renomeie o arquivo `.env.example` do diretório raiz do projeto para `.env`.
 - Copie a sua chave de API do passo anterior e cole no valor de `API_KEY` do seu novo `.env`
 - Apenas a chave, sem qualquer aspas ou outro caractere especial, por exemplo:
   ```
