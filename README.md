@@ -17,12 +17,12 @@ git clone https://github.com/mathbraga/react-kendo.git
 - Depois de criar e confirmar o email, seguindo os passos em (https://www.last.fm/api/webauth) (**apenas o primeiro passo é necessário para este caso**), crie uma conta de API em https://www.last.fm/api/account/create
   ![image](https://github.com/mathbraga/react-kendo/assets/31048764/7543215a-2f0e-4dc2-890b-8b1b5b738785)
 - Escolha um nome e descrição, e em `Callback URL` e `Application homepage` pode preencher com `http://localhost:3000/`
-- Depois de confirmar, sua conta de API será criada e terá uma `API key`, também tendo acesso a essas informações em https://www.last.fm/api/accounts
+- Depois de confirmar, sua conta de API será criada e terá uma `API Key`, também tendo acesso a essas informações em https://www.last.fm/api/accounts
   ![image](https://github.com/mathbraga/react-kendo/assets/31048764/91e1393e-7d5f-4ee1-a17e-9ca5a48e92af)
 
 ### Criar arquivo `.env`
 - Renomeie o arquivo `.env.example` do diretório raiz do projeto para `.env`.
-- Copie a sua chave de API do passo anterior e cole no valor de `API_KEY` do seu novo `.env`
+- Copie a sua `API Key` do passo anterior e cole no valor de `API_KEY` do seu novo `.env`
 - Apenas a chave, sem qualquer aspas ou outro caractere especial, por exemplo:
   ```
   API_ENDPOINT=https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks
