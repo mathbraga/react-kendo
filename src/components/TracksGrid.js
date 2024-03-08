@@ -19,8 +19,7 @@ const initialDataConstraints = {
   skip: 0,
 };
 
-export const TracksGrid = (props) => {
-  const { tracks } = props;
+export const TracksGrid = ({ tracks, height }) => {
   const [dataConstraints, setDataConstraints] = useState(
     initialDataConstraints
   );
@@ -36,7 +35,7 @@ export const TracksGrid = (props) => {
   return (
     <Grid
       style={{
-        height: props.height,
+        height: height,
       }}
       data={dataResult}
       filterable={true}
